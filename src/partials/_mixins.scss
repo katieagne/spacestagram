@@ -4,6 +4,9 @@
 $desktop: 1440px;
 $tablet: 768px;
 
+// padding variable
+$pad: 0.5rem;
+
 // typography
 @mixin header {
   color: $text-dark;

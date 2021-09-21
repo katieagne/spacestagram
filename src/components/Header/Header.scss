@@ -1,0 +1,6 @@
+@import "../../partials/colors";
+@import "../../partials/mixins";
+
+.header {
+  padding: calc($pad * 2);
+}
