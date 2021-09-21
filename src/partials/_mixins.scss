@@ -1,0 +1,13 @@
+@import "./colors";
+
+// screen variables
+$desktop: 1440px;
+$tablet: 768px;
+
+// typography
+@mixin header {
+  color: $text-dark;
+  font-size: 1.5rem;
+  line-height: 2rem;
+  font-weight: 700;
+}
