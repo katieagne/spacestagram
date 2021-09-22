@@ -1,0 +1,57 @@
+@import "../../partials/variables";
+@import "../../partials/mixins";
+
+.card {
+  max-width: $tablet;
+  background-color: $bg-light;
+  border: 1px solid #989898;
+  border-radius: 6px;
+  padding: calc($pm * 1.5);
+  margin: calc($pm * 3) $pm $pm $pm;
+
+  @include tablet {
+    padding: calc($pm * 3);
+  }
+  &__top {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: calc($pm * 0.8);
+
+    @include tablet {
+      margin-bottom: $pm;
+    }
+  }
+
+  &__copyright {
+    @include labels;
+    color: $text-dark;
+  }
+  &__date {
+    @include labels;
+  }
+  &__img {
+    width: 100%;
+    @include tablet {
+      margin: 0 0 calc($pm * 0.5) 0;
+    }
+  }
+  &__info {
+    @include tablet {
+      margin: 0 0 $pm 0;
+    }
+  }
+  &__title {
+    @include body-copy;
+    font-weight: 600;
+    margin-bottom: $pm;
+  }
+  &__title-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  &__text {
+    @include body-copy;
+  }
+}

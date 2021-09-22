@@ -1,6 +1,45 @@
-@import "../../partials/colors";
+@import "../../partials/variables";
 @import "../../partials/mixins";
 
 .header {
-  padding: calc($pad * 2);
+  background-color: $bg;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+
+  &__container {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: calc($pm * 3);
+
+    @include tablet {
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: baseline;
+    }
+
+    @include desktop {
+      max-width: $desktop;
+    }
+  }
+
+  &__title {
+    @include header;
+    text-transform: uppercase;
+    margin-bottom: calc($pm * 2);
+
+    @include tablet {
+      @include tablet-header;
+    }
+  }
+
+  &__sub-title {
+    @include subheader;
+
+    @include tablet {
+      @include tablet-subheader;
+    }
+  }
 }

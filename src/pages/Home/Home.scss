@@ -1,6 +1,7 @@
-@import "../../partials/colors";
+@import "../../partials/variables";
 @import "../../partials/mixins";
 
-.title {
-  @include header;
+.main {
+  display: flex;
+  justify-content: center;
 }
